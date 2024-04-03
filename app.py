@@ -67,9 +67,9 @@ def index():
         input_image = base64.b64encode(input_buffer.getvalue()).decode('utf-8')
         mask_image = base64.b64encode(output_buffer.getvalue()).decode('utf-8')
 
-        return render_template('index2.html', input_image=input_image, mask_image=mask_image, prediction_text=prediction_text)
+        return render_template('index.html', input_image=input_image, mask_image=mask_image, prediction_text=prediction_text)
     else:
-        return render_template('index2.html')
+        return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
